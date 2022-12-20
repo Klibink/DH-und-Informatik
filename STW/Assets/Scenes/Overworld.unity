@@ -36447,9 +36447,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dbcbd7ef9f80e40428d1736b86175e55, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 750a33304da534a44aaeb71243550c24, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.16
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -36707,6 +36707,10 @@ PrefabInstance:
       propertyPath: m_DefaultActionMap
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8045989774222610257, guid: 211b84f6710005e4a9e29dac24266928, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d0cce2bb529e6214e901b393db0cbffc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 211b84f6710005e4a9e29dac24266928, type: 3}
 --- !u!4 &4969959038383258984 stripped
