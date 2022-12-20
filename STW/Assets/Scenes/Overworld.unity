@@ -36266,6 +36266,7 @@ GameObject:
   - component: {fileID: 1744320777}
   - component: {fileID: 1744320779}
   - component: {fileID: 1744320778}
+  - component: {fileID: 1744320780}
   m_Layer: 0
   m_Name: TopCollisionObjects
   m_TagString: Untagged
@@ -36328,7 +36329,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.46875, y: 0.40625, z: 0}
   m_MaxChunkCount: 16
@@ -36419,6 +36420,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1744320780
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744320776}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &1815929749
 GameObject:
   m_ObjectHideFlags: 0
@@ -36651,6 +36668,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1446946274803579051, guid: 211b84f6710005e4a9e29dac24266928, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3295025857516596910, guid: 211b84f6710005e4a9e29dac24266928, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -36710,7 +36731,7 @@ PrefabInstance:
     - target: {fileID: 8045989774222610257, guid: 211b84f6710005e4a9e29dac24266928, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d0cce2bb529e6214e901b393db0cbffc, type: 3}
+      objectReference: {fileID: 21300000, guid: 29aa4a5e5c4eb7d4095df8f65d5c86c7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 211b84f6710005e4a9e29dac24266928, type: 3}
 --- !u!4 &4969959038383258984 stripped
