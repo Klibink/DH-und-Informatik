@@ -6,6 +6,9 @@ public class Player : MonoBehaviour
 {
     public float velocity = 2.4f;
     private Rigidbody2D rigidbody;
+    public GameManager gameManager;
+    public bool isDead = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,4 +24,14 @@ public class Player : MonoBehaviour
             rigidbody.velocity = Vector2.up * velocity;
         }
     }
+
+    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isDead = true;
+        Debug.Log("Collision executed");
+        // gameManager.GameOver();
+    }
 }
+
