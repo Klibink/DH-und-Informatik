@@ -55,6 +55,6 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        EditorSceneManager.LoadScene(2);
+        EditorSceneManager.LoadScene(3);
     }
 }
