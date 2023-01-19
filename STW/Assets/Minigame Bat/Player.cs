@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigidbody;
     public GameManager gameManager;
     public bool isDead = false;
+    public bool hasWon = false;
+    
 
 
     // Start is called before the first frame update
@@ -25,13 +27,20 @@ public class Player : MonoBehaviour
         }
     }
 
-    
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        isDead = true;
-        Debug.Log("Collision executed");
-        // gameManager.GameOver();
+        if (collision.gameObject.tag == "Finish")
+        {
+            Debug.Log("You Won (Player Class)");
+            hasWon = true;
+        } else
+        {
+            isDead = true;
+            Debug.Log("Collision executed");
+            // gameManager.GameOver();
+        }
     }
 }
 
