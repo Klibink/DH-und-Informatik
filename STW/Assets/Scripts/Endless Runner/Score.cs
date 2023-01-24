@@ -9,12 +9,13 @@ public class Score : MonoBehaviour
     private float score = 0.0f;
 
     private int difficultyLevel = 1;
-    private int maxDifficultyLevel = 10;
+    private int maxDifficultyLevel = 15;
     private int scoreToNextLevel = 10;
 
     public TMP_Text scoreText;
 
     private bool isDead = false;
+    public DeathMenu deathMenu;
 
     // Update is called once per frame
     void Update()
@@ -44,5 +45,6 @@ public class Score : MonoBehaviour
     public void OnDeath()
     {
         isDead = true;
+        deathMenu.ToggleEndMenu(score);
     }
 }
