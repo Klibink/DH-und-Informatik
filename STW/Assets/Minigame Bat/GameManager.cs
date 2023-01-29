@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Text gameOverCountdown;
     public float countTimer = 5;
-    private AudioSource winningSound;
+    private AudioSource[] audio;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,27 +20,34 @@ public class GameManager : MonoBehaviour
         gameOverCountdown.gameObject.SetActive(false);
         // Game Freeze = 0, Spielmodus = 1
         Time.timeScale = 0;
-        winningSound = GetComponent<AudioSource>();
-        if (winningSound == null)
+        audio = GetComponents<AudioSource>();
+        if (audio == null)
         {
             Debug.LogError("Sound not found");
         }
+        audio[1].Play();
     }
 
     private void Update()
     {
         if (player.hasWon)
         {
-            winningSound.Play();
+            
             Time.timeScale = 0;
+            enabled = false;
+            audio[1].Stop();
+            audio[0].Play();
+            EditorSceneManager.LoadScene(0);
         }
 
         if (player.isDead)
         {
+            
             Debug.Log("Player is dead.");
             Time.timeScale = 0;
             gameOverCountdown.gameObject.SetActive(true);
             countTimer -= Time.unscaledDeltaTime;
+            
         }
 
         gameOverCountdown.text = "Restarting in " + (countTimer).ToString("0");
