@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject startButton;
     public Player player;
     public Text gameOverCountdown;
-    public float countTimer = 5;
+    public float countTimer = 1;
     private AudioSource[] audio;
 
 
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Sound not found");
         }
         audio[1].Play();
+       
     }
 
     private void Update()
@@ -35,8 +36,8 @@ public class GameManager : MonoBehaviour
             
             Time.timeScale = 0;
             enabled = false;
-            //audio[1].Stop();
-            //audio[0].Play();
+            audio[1].Stop();
+            audio[0].Play();
             
             EditorSceneManager.LoadScene(1);
             Time.timeScale = 1;
