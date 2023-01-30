@@ -35,9 +35,11 @@ public class GameManager : MonoBehaviour
             
             Time.timeScale = 0;
             enabled = false;
-            audio[1].Stop();
-            audio[0].Play();
-            EditorSceneManager.LoadScene(0);
+            //audio[1].Stop();
+            //audio[0].Play();
+            
+            EditorSceneManager.LoadScene(1);
+            Time.timeScale = 1;
         }
 
         if (player.isDead)
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
             
             Debug.Log("Player is dead.");
             Time.timeScale = 0;
+
             gameOverCountdown.gameObject.SetActive(true);
             countTimer -= Time.unscaledDeltaTime;
             
