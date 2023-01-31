@@ -20,6 +20,7 @@ public class PlayerMotor : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         startTime = Time.time;
+        transform.position = new Vector3(0f,1.65f);
     }
 
     // Update is called once per frame
@@ -63,10 +64,9 @@ public class PlayerMotor : MonoBehaviour
         if(hit.transform.tag == "Obstacle")
         {
             Debug.Log("hab getroffen");
-            if (hit.point.z > transform.position.z + controller.radius)
-            {
+            
                 Death();
-            }
+            
         }
         
     }

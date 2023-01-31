@@ -5,6 +5,7 @@ using UnityEngine;
 public class TileManager : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
+    public GameObject spawnTile;
 
     private Transform playerTransform;
     private float spawnZ = -10.0f;
@@ -15,6 +16,7 @@ public class TileManager : MonoBehaviour
 
     private List<GameObject> activeTiles;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +25,9 @@ public class TileManager : MonoBehaviour
 
         for(int i = 0; i< amountTilesOnScreen; i++)
         {
-            if(i < 2)
+            if (i < 3)
             {
-                SpawnTile(0);
+                SpawnStartTile();
             }
             else
                 SpawnTile();
@@ -37,7 +39,7 @@ public class TileManager : MonoBehaviour
     {
         if(playerTransform.position.z - safeZone > (spawnZ - amountTilesOnScreen * tileLength))
         {
-            SpawnTile();
+            SpawnTile(0);
             DeleteTile();
         }
     }
@@ -78,5 +80,15 @@ public class TileManager : MonoBehaviour
 
         lastPrefabIndex = randomIndex;
         return randomIndex;
+    }
+
+    private void SpawnStartTile()
+    {
+        GameObject go;
+        go = Instantiate(spawnTile) as GameObject;
+        go.transform.SetParent(transform);
+        go.transform.position = Vector3.forward * spawnZ;
+        spawnZ += tileLength;
+        activeTiles.Add(go);
     }
 }
