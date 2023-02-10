@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "Standard";
+    src: url('./fonts/PixeloidSans-nR3g1.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Bold";
+    src: url("/fonts/PixeloidSansBold-RpeJo.ttf") format('truetype');
+}
+
+html, body {
+    scroll-behavior: smooth;
+    font-family: "Standard", Fallback, "Garamond";
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+section.one{
+    height: 100vh;
+    width: 100%;
+    background-image: url("img/apocalypse_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+h1#game-title{
+    color: black;
+    font-size: 3em;
+    -webkit-animation: bounce .9s ease infinite alternate;
+    margin: auto;
+    word-spacing: 100vw;
+    text-align: center;
+    line-height: 1.6;
+}
+h1#game-title > a{
+    transition: .3s linear;
+}
+h1#game-title > a:hover{
+    /*background: rgba(37, 37, 37, .75);*/
+    color: #252525;
+}
+@-webkit-keyframes bounce {
+    0% {
+        text-shadow:
+                0 5px 0 #494949,
+                0 2px 3px rgba(0, 0, 0, 1);
+    }
+    100% {
+        transform:translateY(-20px);
+        text-shadow:  0 50px 0 0,
+        0 0px 20px rgba(0, 0, 0, .8);
+    }
+}
+
+/* Team */
+section.two{
+    background: #252525;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2#team{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+}
+
+div#team-row{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img.img-member {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: block;
+    border: 5px solid #494949;
+    max-height: 500px;
+}
+
+div.description {
+    text-align: center;
+    color: #e5e5e5;
+}
+
+h3.team-name{
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    h1#game-title{
+        word-spacing: unset;
+        font-size: 4em;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+
+}
