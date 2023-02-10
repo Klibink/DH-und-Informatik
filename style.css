@@ -26,7 +26,6 @@ section.one{
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
 }
@@ -59,13 +58,12 @@ h1#game-title > a:hover{
     }
 }
 
-/* Team */
-section.two{
+/* Section 2 Team */
+section.content{
     background: #252525;
     height: auto;
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -84,12 +82,13 @@ h2#team{
 div#team-row{
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-
+div.team-member{
+    margin: 1em 0;
+}
 img.img-member {
     width: 80%;
     height: auto;
@@ -97,6 +96,7 @@ img.img-member {
     display: block;
     border: 5px solid #494949;
     max-height: 500px;
+    object-fit: cover;
 }
 
 div.description {
@@ -108,12 +108,43 @@ h3.team-name{
     font-size: 1.6em;
     font-weight: 300;
 }
+p.sub_headline{
+    font-size: 1.15em;
+}
+
+/* Section 3 Über das Projekt */
+section.content2{
+    background: #e5e5e5;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 65px 0;
+}
+h2#project{
+    color: black;
+    font-size: 3em;
+    text-align: center;
+}
+div.project-container{
+    width: 88%;
+}
 
 @media only screen and (min-width: 600px) {
     /* For tablets: */
     h1#game-title{
         word-spacing: unset;
         font-size: 4em;
+    }
+    div#team-row{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    div.team-member{
+        width: calc(50% - 10px);
     }
 }
 @media only screen and (min-width: 768px) {
