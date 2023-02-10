@@ -62,13 +62,17 @@ h1#game-title > a:hover{
 /* Team */
 section.two{
     background: #252525;
-    height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 65px 0;
+}
+div#content-sec-two{
+    width: 88%;
 }
 
 h2#team{
