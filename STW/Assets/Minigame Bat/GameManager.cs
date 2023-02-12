@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
             audio[1].Stop();
             audio[0].Play();
             
-            EditorSceneManager.LoadScene(1);
+            SceneManager.LoadScene(1);
             Time.timeScale = 1;
         }
 
@@ -79,6 +79,6 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        EditorSceneManager.LoadScene(3);
+        SceneManager.LoadScene(3);
     }
 }

@@ -16,10 +16,13 @@ public class TileManager : MonoBehaviour
 
     private List<GameObject> activeTiles;
 
+    public GameObject player;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         activeTiles = new List<GameObject>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -32,11 +35,40 @@ public class TileManager : MonoBehaviour
             else
                 SpawnTile();
         }
+        if (player.GetComponent<PlayerMotor>().isInvincible)
+        {
+            for (int i = 0; i < activeTiles.Count; i++)
+            {
+                activeTiles[i].GetComponentInChildren<MeshCollider>().enabled = false;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < activeTiles.Count; i++)
+            {
+                activeTiles[i].GetComponentInChildren<MeshCollider>().enabled = true;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (player.GetComponent<PlayerMotor>().isInvincible)
+        {
+            for(int i = 0; i < activeTiles.Count; i++)
+            {
+                activeTiles[i].GetComponentInChildren<MeshCollider>().enabled = false;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < activeTiles.Count; i++)
+            {
+                activeTiles[i].GetComponentInChildren<MeshCollider>().enabled = true;
+            }
+        }
+
         if(playerTransform.position.z - safeZone > (spawnZ - amountTilesOnScreen * tileLength))
         {
             SpawnTile(0);

@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2c16c1523553345aaab4510358695d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInvincible: 1
 --- !u!143 &185009908
 CharacterController:
   m_ObjectHideFlags: 0
@@ -395,7 +396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185009906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -939,6 +940,7 @@ MonoBehaviour:
   - {fileID: 2665080127897166502, guid: 01a0603bf95ff5b4192343e094c7307a, type: 3}
   - {fileID: 2665080127897166502, guid: 01a0603bf95ff5b4192343e094c7307a, type: 3}
   spawnTile: {fileID: 3725797847362432256, guid: 4031b1f3c60406a4c957f81ed806a099, type: 3}
+  player: {fileID: 0}
 --- !u!4 &888936913
 Transform:
   m_ObjectHideFlags: 0

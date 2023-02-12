@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour
 {
+    private Transform startTransform;
     private CharacterController controller;
     private Vector3 moveVector;
     private float speed = 15.0f;
@@ -13,28 +14,36 @@ public class PlayerMotor : MonoBehaviour
     private float animationDuration = 2.0f;
     private float startTime;
 
+    public bool isInvincible = true;
     private bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        startTransform = this.transform;
         controller = GetComponent<CharacterController>();
-        startTime = Time.time;
-        transform.position = new Vector3(0f,1.65f);
+        startTime = Time.timeSinceLevelLoad;
+        startTransform.position = new Vector3(0f,1.8f);
+        Debug.Log("Game started");
     }
 
     // Update is called once per frame
     void Update()
     {
+        //transform.position = startTransform.position;
+        Debug.Log("Meine Position ist: " + transform.position);
         if (isDead)
             return;
 
-        if (Time.time - startTime < animationDuration)
+        if (Time.timeSinceLevelLoad < animationDuration)
         {
-            controller.Move(Vector3.forward * speed * Time.deltaTime);
+            Debug.Log("Test");
+            //transform.position = new Vector3(0f,1.8f);
+            transform.Translate(Vector3.forward * Time.deltaTime * 10);
+            //controller.Move(startTransform.position * speed * Time.deltaTime);
             return;
         }
-
+        isInvincible = false;
         moveVector = Vector3.zero;
 
         if (controller.isGrounded)
@@ -61,7 +70,7 @@ public class PlayerMotor : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(hit.transform.tag == "Obstacle")
+        if(hit.transform.tag == "Obstacle" && !isInvincible)
         {
             Debug.Log("hab getroffen");
             
