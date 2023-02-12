@@ -10,6 +10,9 @@ scopes = {
 	"last_search.DA949528" = "sample"
 	"OpenInspectorPreview.DA949528" = "0"
 	"currentGroup.DA949528" = "all"
+	"last_search.EAB0C2BA" = "2d platform"
+	"OpenInspectorPreview.EAB0C2BA" = "0"
+	"currentGroup.EAB0C2BA" = "all"
 }
 providers = {
 	adb = {
