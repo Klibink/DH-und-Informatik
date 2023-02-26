@@ -7,10 +7,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject startButton;
+    public GameObject storyButton;
     public Player player;
     public Text gameOverCountdown;
     public float countTimer = 1;
     private AudioSource[] audio;
+    public bool gameOn = false;
+    
 
 
     // Start is called before the first frame update
@@ -26,7 +29,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Sound not found");
         }
         audio[1].Play();
-       
+        
     }
 
     private void Update()
@@ -67,7 +70,11 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         startButton.SetActive(false);
+        storyButton.SetActive(false);
+        gameOn = true;
+        Debug.Log("Game is On");
         Time.timeScale = 1;
+        
     }
 
     public void GameOver()
