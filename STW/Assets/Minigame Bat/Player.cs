@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public GameManager gameManager;
     public bool isDead = false;
     public bool hasWon = false;
+    public bool gravity = false;
     
 
 
@@ -16,11 +17,17 @@ public class Player : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody.gravityScale = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (gravity == true) 
+        {
+            rigidbody.gravityScale = 1;
+        }
+        
         if (Input.GetKey("space"))
         {
             rigidbody.velocity = Vector2.up * velocity;
