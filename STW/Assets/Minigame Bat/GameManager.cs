@@ -7,28 +7,48 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject startButton;
+    public GameObject storyButton;
     public Player player;
     public Text gameOverCountdown;
     public float countTimer = 1;
     private AudioSource[] audio;
+    public bool gameOn = false;
+    private GameObject obstacle;
+    public Animator animObstacle;
+    public Animator animBackground;
+    public Animator animPlatform;
 
+
+    void Awake()
+    {
+        animObstacle = GameObject.FindGameObjectWithTag("Obstacle").GetComponent<Animator>();
+        animBackground = GameObject.FindGameObjectWithTag("Background").GetComponent<Animator>();
+        animPlatform = GameObject.FindGameObjectWithTag("Platform").GetComponent<Animator>();
+        animObstacle.enabled = false;
+        animBackground.enabled = false;
+        animPlatform.enabled = false;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        
+        Time.timeScale = 1;
         startButton.SetActive(true);
         gameOverCountdown.gameObject.SetActive(false);
         // Game Freeze = 0, Spielmodus = 1
-        Time.timeScale = 0;
+        
         audio = GetComponents<AudioSource>();
         if (audio == null)
         {
             Debug.LogError("Sound not found");
         }
         audio[1].Play();
-       
-    }
 
+
+
+    }
+   
     private void Update()
     {
         if (player.hasWon)
@@ -64,10 +84,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void animationStarter()
+    {
+        animObstacle.enabled = true;
+        animBackground.enabled = true;
+        animPlatform.enabled = true;
+    }
+
     public void StartGame()
     {
+        animationStarter();
+        player.gravity = true;
         startButton.SetActive(false);
-        Time.timeScale = 1;
+        storyButton.SetActive(false);
+        gameOn = true;
+        Debug.Log("Game is On");
+        //Time.timeScale = 1;
+        
     }
 
     public void GameOver()
