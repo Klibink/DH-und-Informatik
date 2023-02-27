@@ -7,7 +7,7 @@ public class PlayerMotor : MonoBehaviour
     private Transform startTransform;
     private CharacterController controller;
     private Vector3 moveVector;
-    private float speed = 15.0f;
+    private float speed = 10.0f;
     private float verticalVelocity = 0.0f;
     private float gravity = 12.0f;
 
