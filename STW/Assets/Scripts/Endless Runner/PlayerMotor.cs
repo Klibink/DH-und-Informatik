@@ -16,6 +16,7 @@ public class PlayerMotor : MonoBehaviour
 
     public bool isInvincible = true;
     private bool isDead = false;
+    public bool isSlowed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +69,11 @@ public class PlayerMotor : MonoBehaviour
         speed = 10.0f + modifier;
     }
 
+    public float GetSpeed()
+    {
+        return speed;
+    }
+
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if(hit.transform.tag == "Obstacle" && !isInvincible)
@@ -77,6 +83,11 @@ public class PlayerMotor : MonoBehaviour
                 Death();
             
         }
+        else if(hit.transform.tag =="SlowObstacle" && !isInvincible)
+        {
+            Slowed();
+            Destroy(hit.transform.gameObject);
+        }
         
     }
 
@@ -85,5 +96,21 @@ public class PlayerMotor : MonoBehaviour
         isDead = true;
         GetComponent<Score>().OnDeath();
         Debug.Log("Dead");
+    }
+
+    private void Slowed()
+    {
+        StartCoroutine(SlowDown());
+    }
+
+    IEnumerator SlowDown()
+    {
+        isSlowed = true;
+        float currentSpeed = speed;
+        speed = 10.0f;
+        yield return new WaitForSeconds(3f);
+        speed = currentSpeed;
+        isSlowed = false;
+
     }
 }

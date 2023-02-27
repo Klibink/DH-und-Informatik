@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3318689441606926374}
   m_Layer: 0
   m_Name: PP_Mushroom_Fantasy_Purple_08
-  m_TagString: Obstacle
+  m_TagString: SlowObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

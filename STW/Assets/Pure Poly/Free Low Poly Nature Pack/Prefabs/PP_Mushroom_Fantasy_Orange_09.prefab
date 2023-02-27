@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7570405467501425084}
   m_Layer: 0
   m_Name: PP_Mushroom_Fantasy_Orange_09
-  m_TagString: Obstacle
+  m_TagString: SlowObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7570405467501425085}
-  m_LocalRotation: {x: 0.000000009313225, y: -4.6566123e-10, z: 0.0000000018626449, w: 1}
+  m_LocalRotation: {x: 0.000000009313225, y: -4.6566123e-10, z: 0.0000000018626449,
+    w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
