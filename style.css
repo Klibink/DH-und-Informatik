@@ -19,12 +19,20 @@ a{
     color: unset;
 }
 
+h2 {
+    font-size: .5em;
+    line-height: initial;
+}
+p {
+    line-height: 1.4;
+}
 section.one{
     height: 100vh;
     width: 100%;
     background-image: url("img/apocalypse_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: bottom;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,6 +76,7 @@ section.content{
     justify-content: center;
     flex-direction: column;
     padding: 65px 0;
+    color: #e5e5e5;
 }
 div#content-sec-two{
     width: 88%;
@@ -77,6 +86,8 @@ h2#team{
     color: white;
     font-size: 3em;
     text-align: center;
+    padding-top: 50px;
+    margin-top: -50px;
 }
 
 div#team-row{
@@ -88,6 +99,7 @@ div#team-row{
 }
 div.team-member{
     margin: 1em 0;
+    align-self: flex-start;
 }
 img.img-member {
     width: 80%;
@@ -97,11 +109,13 @@ img.img-member {
     border: 5px solid #494949;
     max-height: 500px;
     object-fit: cover;
+    object-position: 0% 0%;
 }
 
 div.description {
     text-align: center;
     color: #e5e5e5;
+    padding: 0 10px;
 }
 
 h3.team-name{
@@ -123,13 +137,24 @@ section.content2{
     flex-direction: column;
     padding: 65px 0;
 }
-h2#project{
-    color: black;
+h2.project{
     font-size: 3em;
     text-align: center;
 }
 div.project-container{
     width: 88%;
+}
+h2.headline-game-concept{
+    font-size: 1.75em;
+    text-decoration: underline;
+}
+img.game-img{
+    height: auto;
+    width: 100%;
+    max-width: 800px;
+}
+#jump-n-run, #temple-run{
+    margin-bottom: 65px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -141,13 +166,16 @@ div.project-container{
     div#team-row{
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     div.team-member{
         width: calc(50% - 10px);
+        margin: 0;
     }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     /* For desktop: */
-
+    div.team-member{
+        width: calc(25% - 10px);
+    }
 }
