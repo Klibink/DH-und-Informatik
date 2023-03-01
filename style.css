@@ -19,10 +19,7 @@ a{
     color: unset;
 }
 
-h2 {
-    font-size: .5em;
-    line-height: initial;
-}
+
 p {
     line-height: 1.4;
 }
@@ -32,7 +29,7 @@ section.one{
     background-image: url("img/apocalypse_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: bottom;
+    background-position: bottom;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,7 +41,7 @@ h1#game-title{
     margin: auto;
     word-spacing: 100vw;
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 h1#game-title > a{
     transition: .3s linear;
@@ -52,6 +49,10 @@ h1#game-title > a{
 h1#game-title > a:hover{
     /*background: rgba(37, 37, 37, .75);*/
     color: #252525;
+}
+h2#subtitle{
+    font-size: .5em;
+    line-height: initial;
 }
 @-webkit-keyframes bounce {
     0% {
@@ -140,6 +141,7 @@ section.content2{
 h2.project{
     font-size: 3em;
     text-align: center;
+    max-width: 88%;
 }
 div.project-container{
     width: 88%;
@@ -157,6 +159,42 @@ img.game-img{
     margin-bottom: 65px;
 }
 
+/*Section Projektdokumentation*/
+div#documentation-container{
+    width: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+div#documentation{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+div.doc-pages{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    transition: .3s linear;
+}
+div.doc-pages:hover{
+    background-color: #252525;
+    color: #e5e5e5;
+    transition: .3s linear;
+}
+img.doc-logos{
+    width: auto;
+    max-height: 100px;
+    background-color: #e5e5e5;
+}
+
+div.installation-tipps{
+    width: 100%;
+}
 @media only screen and (min-width: 600px) {
     /* For tablets: */
     h1#game-title{
