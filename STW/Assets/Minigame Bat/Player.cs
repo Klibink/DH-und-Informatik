@@ -6,18 +6,19 @@ public class Player : MonoBehaviour
 {
     public float velocity = 2.4f;
     private Rigidbody2D rigidbody;
+    
     public GameManager gameManager;
     public bool isDead = false;
     public bool hasWon = false;
     public bool gravity = false;
     
 
-
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         rigidbody.gravityScale = 0;
+
     }
 
     // Update is called once per frame
@@ -26,24 +27,31 @@ public class Player : MonoBehaviour
         if (gravity == true) 
         {
             rigidbody.gravityScale = 1;
-        }
-        
-        if (Input.GetKey("space"))
+        } else
         {
-            rigidbody.velocity = Vector2.up * velocity;
+            rigidbody.gravityScale = 0;
         }
-    }
 
+        if (Input.GetKey("space"))
+            {
+                rigidbody.velocity = Vector2.up * velocity;
+            }
+        
+    }
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Finish")
         {
+            gravity = false;         
             Debug.Log("You Won (Player Class)");
             hasWon = true;
+
+            
         } else
         {
+            gravity = false;
             isDead = true;
             Debug.Log("Collision executed");
             // gameManager.GameOver();

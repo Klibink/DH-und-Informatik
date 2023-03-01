@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public Animator animObstacle;
     public Animator animBackground;
     public Animator animPlatform;
+    private DialogueTrigger[] dialogue;
+
 
 
     void Awake()
@@ -45,33 +47,40 @@ public class GameManager : MonoBehaviour
         }
         audio[1].Play();
 
-
+        dialogue = GetComponents<DialogueTrigger>();
 
     }
    
     private void Update()
     {
         if (player.hasWon)
-        {
-            
-            Time.timeScale = 0;
+        {         
+            stopAnimation();
             enabled = false;
             audio[1].Stop();
             audio[0].Play();
-            
-            SceneManager.LoadScene(1);
-            Time.timeScale = 1;
+
+            //triggers the winner dialogue
+            dialogue[0].TriggerDialogue();
+
+            //SceneManager.LoadScene(1);
+
         }
 
         if (player.isDead)
         {
-            
             Debug.Log("Player is dead.");
-            Time.timeScale = 0;
+            stopAnimation();
+            enabled = false;
+            audio[1].Stop();
+            audio[2].Play();
 
-            gameOverCountdown.gameObject.SetActive(true);
-            countTimer -= Time.unscaledDeltaTime;
-            
+            //trigger the Looser dialogue
+            dialogue[1].TriggerDialogue();
+
+            //gameOverCountdown.gameObject.SetActive(true);
+            //countTimer -= Time.unscaledDeltaTime;
+
         }
 
         gameOverCountdown.text = "Restarting in " + (countTimer).ToString("0");
@@ -89,6 +98,14 @@ public class GameManager : MonoBehaviour
         animObstacle.enabled = true;
         animBackground.enabled = true;
         animPlatform.enabled = true;
+    }
+
+    private void stopAnimation()
+    {
+        //animation in the background freezes
+        animObstacle.enabled = false;
+        animBackground.enabled = false;
+        animPlatform.enabled = false;
     }
 
     public void StartGame()
