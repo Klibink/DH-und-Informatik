@@ -34,7 +34,11 @@ public class PlayerMotor : MonoBehaviour
         //transform.position = startTransform.position;
         Debug.Log("Meine Position ist: " + transform.position);
         if (isDead)
+        {
+            Debug.Log("bin tot");
             return;
+        }
+            
 
         if (Time.timeSinceLevelLoad < animationDuration)
         {
