@@ -24,7 +24,7 @@ public class PlayerMotor : MonoBehaviour
         startTransform = this.transform;
         controller = GetComponent<CharacterController>();
         startTime = Time.timeSinceLevelLoad;
-        startTransform.position = new Vector3(0f,1.8f);
+        startTransform.position = new Vector3(0f,1.0f);
         Debug.Log("Game started");
     }
 
