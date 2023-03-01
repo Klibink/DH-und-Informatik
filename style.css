@@ -19,12 +19,17 @@ a{
     color: unset;
 }
 
+
+p {
+    line-height: 1.4;
+}
 section.one{
     height: 100vh;
     width: 100%;
     background-image: url("img/apocalypse_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +41,7 @@ h1#game-title{
     margin: auto;
     word-spacing: 100vw;
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 h1#game-title > a{
     transition: .3s linear;
@@ -44,6 +49,10 @@ h1#game-title > a{
 h1#game-title > a:hover{
     /*background: rgba(37, 37, 37, .75);*/
     color: #252525;
+}
+h2#subtitle{
+    font-size: .5em;
+    line-height: initial;
 }
 @-webkit-keyframes bounce {
     0% {
@@ -68,6 +77,7 @@ section.content{
     justify-content: center;
     flex-direction: column;
     padding: 65px 0;
+    color: #e5e5e5;
 }
 div#content-sec-two{
     width: 88%;
@@ -77,6 +87,8 @@ h2#team{
     color: white;
     font-size: 3em;
     text-align: center;
+    padding-top: 50px;
+    margin-top: -50px;
 }
 
 div#team-row{
@@ -88,6 +100,7 @@ div#team-row{
 }
 div.team-member{
     margin: 1em 0;
+    align-self: flex-start;
 }
 img.img-member {
     width: 80%;
@@ -97,11 +110,13 @@ img.img-member {
     border: 5px solid #494949;
     max-height: 500px;
     object-fit: cover;
+    object-position: 0% 0%;
 }
 
 div.description {
     text-align: center;
     color: #e5e5e5;
+    padding: 0 10px;
 }
 
 h3.team-name{
@@ -123,15 +138,63 @@ section.content2{
     flex-direction: column;
     padding: 65px 0;
 }
-h2#project{
-    color: black;
+h2.project{
     font-size: 3em;
     text-align: center;
+    max-width: 88%;
 }
 div.project-container{
     width: 88%;
 }
+h2.headline-game-concept{
+    font-size: 1.75em;
+    text-decoration: underline;
+}
+img.game-img{
+    height: auto;
+    width: 100%;
+    max-width: 800px;
+}
+#jump-n-run, #temple-run{
+    margin-bottom: 65px;
+}
 
+/*Section Projektdokumentation*/
+div#documentation-container{
+    width: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+div#documentation{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+div.doc-pages{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    transition: .3s linear;
+}
+div.doc-pages:hover{
+    background-color: #252525;
+    color: #e5e5e5;
+    transition: .3s linear;
+}
+img.doc-logos{
+    width: auto;
+    max-height: 100px;
+    background-color: #e5e5e5;
+}
+
+div.installation-tipps{
+    width: 100%;
+}
 @media only screen and (min-width: 600px) {
     /* For tablets: */
     h1#game-title{
@@ -141,13 +204,16 @@ div.project-container{
     div#team-row{
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     div.team-member{
         width: calc(50% - 10px);
+        margin: 0;
     }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     /* For desktop: */
-
+    div.team-member{
+        width: calc(25% - 10px);
+    }
 }

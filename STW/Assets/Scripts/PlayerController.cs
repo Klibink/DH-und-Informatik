@@ -9,7 +9,23 @@ public class PlayerController : MonoBehaviour
   public float moveSpeed = 1f;
   public float collisionOffset = 0.05f;
   public ContactFilter2D movementFilter;
+  public void SavePlayer()
+  {
+    SaveSystem.SavePlayer(this);
+  }
 
+  public void LoadPlayer()
+  {
+    PlayerData data = SaveSystem.LoadPlayer();
+
+    Vector3 position;
+    position.x = data.position[0];
+    position.y = data.position[1];
+    position.z = data.position[2];
+    transform.position = position;
+
+
+  }
 
   Vector2 movementInput;
 

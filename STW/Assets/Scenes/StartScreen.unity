@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -362,7 +362,8 @@ MonoBehaviour:
   m_text: Optionen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
-  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
+  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -737,7 +738,8 @@ MonoBehaviour:
   m_text: Spiel starten
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
-  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
+  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -872,7 +874,8 @@ MonoBehaviour:
   m_text: 'Echoes of the Past:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
-  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
+  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1682,7 +1685,8 @@ MonoBehaviour:
   m_text: "Zur\xFCck"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
-  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
+  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1893,7 +1897,8 @@ MonoBehaviour:
   m_text: Optionen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
-  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
+  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2028,7 +2033,8 @@ MonoBehaviour:
   m_text: Spiel beenden
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
-  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
+  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2319,7 +2325,8 @@ MonoBehaviour:
   m_text: Volume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
-  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
+  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2800,7 +2807,8 @@ MonoBehaviour:
   m_text: A Misson to  Save Humanity
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
-  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
+  m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
