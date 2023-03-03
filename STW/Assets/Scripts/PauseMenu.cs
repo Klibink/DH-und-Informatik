@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -50,13 +51,6 @@ public class PauseMenu : MonoBehaviour
     Time.timeScale = 0f;
     GameIsPaused = true;
   }
-
-  public void QuitGame()
-  {
-    Debug.Log("Quitting Game...");
-    Application.Quit();
-  }
-
   public void ToggleSound()
   {
 
@@ -64,5 +58,19 @@ public class PauseMenu : MonoBehaviour
     audioSource.mute = !soundOn;
 
   }
+
+  public void BackToMainMenu()
+  {
+    SceneManager.LoadScene(0);
+  }
+  public void QuitGame()
+  {
+    PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
+    Debug.Log("Quitting Game...");
+   // SceneManager.LoadScene(0);
+    Application.Quit();
+  }
+
+  
 
 }

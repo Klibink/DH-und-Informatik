@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour
 
   public void LoadPlayer()
   {
+
+    SceneManager.LoadScene(PlayerPrefs.GetInt("SavedScene"));
+
     PlayerData data = SaveSystem.LoadPlayer();
 
     Vector3 position;
