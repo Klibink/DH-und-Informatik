@@ -8,12 +8,14 @@ public class GameManager : MonoBehaviour
 {
     public GameObject startButton;
     public GameObject storyButton;
+    private GameObject obstacle;
+    public GameObject endButton;
+    public GameObject restartButton;
     public Player player;
     public Text gameOverCountdown;
     public float countTimer = 1;
     private AudioSource[] audio;
     public bool gameOn = false;
-    private GameObject obstacle;
     public Animator animObstacle;
     public Animator animBackground;
     public Animator animPlatform;
@@ -36,6 +38,8 @@ public class GameManager : MonoBehaviour
     {
         
         Time.timeScale = 1;
+        endButton.SetActive(false);
+        restartButton.SetActive(false);
         startButton.SetActive(true);
         gameOverCountdown.gameObject.SetActive(false);
         // Game Freeze = 0, Spielmodus = 1
@@ -63,6 +67,8 @@ public class GameManager : MonoBehaviour
             //triggers the winner dialogue
             dialogue[0].TriggerDialogue();
 
+            endButton.SetActive(true);
+            //restartButton.SetActive(true);
             //SceneManager.LoadScene(1);
 
         }
@@ -77,6 +83,9 @@ public class GameManager : MonoBehaviour
 
             //trigger the Looser dialogue
             dialogue[1].TriggerDialogue();
+
+            endButton.SetActive(true);
+            restartButton.SetActive(true);
 
             //gameOverCountdown.gameObject.SetActive(true);
             //countTimer -= Time.unscaledDeltaTime;
@@ -129,6 +138,18 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(5);
+    }
+
+    public void EndGame()
+    {
+        // decides if the game will progress or if the player returns to the previous state of game progress
+        if (player.hasWon == true)
+        {
+            SceneManager.LoadScene(4);
+        } else
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

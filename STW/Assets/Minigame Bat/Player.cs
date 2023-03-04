@@ -34,7 +34,10 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("space"))
             {
-                rigidbody.velocity = Vector2.up * velocity;
+                if (isDead == false)
+                { 
+                    rigidbody.velocity = Vector2.up * velocity; 
+                }             
             }
         
     }
@@ -42,19 +45,21 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //checks if frank hit an obstacle or the finish trigger area
         if (collision.gameObject.tag == "Finish")
         {
-            gravity = false;         
+            gravity = false;
+            rigidbody.velocity = Vector2.up * velocity;
             Debug.Log("You Won (Player Class)");
             hasWon = true;
 
             
         } else
         {
-            gravity = false;
+            //gravity = false;
             isDead = true;
             Debug.Log("Collision executed");
-            // gameManager.GameOver();
+
         }
     }
 }
