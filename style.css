@@ -195,6 +195,31 @@ img.doc-logos{
 div.installation-tipps{
     width: 100%;
 }
+div#download-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+a#download-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: .5em 1em;
+    transition: .3s linear;
+}
+a#download-button:hover{
+    background-color: rgba(37,37,37, .5);
+    color: #e5e5e5;
+    transition: .3s linear;
+
+}
+img#download-icon{
+    width: 50px;
+    height: auto;
+    margin-bottom: -15px;
+}
 @media only screen and (min-width: 600px) {
     /* For tablets: */
     h1#game-title{

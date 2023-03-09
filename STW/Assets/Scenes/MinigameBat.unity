@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7126,6 +7126,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1715935546}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1438167880 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7495513172263577764, guid: f71848fd6a2621f489f373d1893bee26,
+    type: 3}
+  m_PrefabInstance: {fileID: 1715935546}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1453310534
 GameObject:
   m_ObjectHideFlags: 0
@@ -8766,6 +8778,7 @@ GameObject:
   - component: {fileID: 1622144915}
   - component: {fileID: 1622144914}
   - component: {fileID: 1622144913}
+  - component: {fileID: 1622144918}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -8883,6 +8896,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1622144918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622144912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20fd3967d3d1e964c8a053f9037f65ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 2001310619}
+  pauseMenuButton: {fileID: 1438167880}
+  audioSource: {fileID: 0}
 --- !u!1 &1627328252
 GameObject:
   m_ObjectHideFlags: 0
