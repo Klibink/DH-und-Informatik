@@ -7,10 +7,10 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private float move;
 
-    public float jump;
+//    public float jump;
 
     private Rigidbody2D rb;
-    private bool isJumping;
+//    private bool isJumping;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,18 +24,21 @@ public class PlayerMovement : MonoBehaviour
 
       rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
-      if(Input.GetButtonDown("Jump") && !isJumping)
-        {
-          rb.AddForce(new Vector2(rb.velocity.x, jump));
-          isJumping = true;
-        }
+      if(Input.GetKeyDown("space"))
+            //&& !isJumping)
+       {
+            rb.velocity = new Vector3(0, 7, 0);
+
+//                rb.AddForce(new Vector2(rb.velocity.x, jump));
+//          isJumping = true;
+       }
     }
 
-    void OnCollissionEnter2D(Collision2D other)
-    {
-      if(other.gameObject.CompareTag("Ground"))
-      {
-        isJumping = false;
-      }
-    }
+//    void OnCollissionEnter2D(Collision2D other)
+//    {
+//      if(other.gameObject.CompareTag("Ground"))
+//      {
+//        isJumping = false;
+//      }
+//    }
 }
