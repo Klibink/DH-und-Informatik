@@ -1,25 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-  private Vector2 Movement;
-  private Rigidbody2D rb;
+    public float speed;
+    private float move;
 
-  private void Awake() {
-    rb = GetComponent<Rigidbody2D>();
-  }
+    public float jump;
 
+    private Rigidbody2D rb;
+    private bool isJumping;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
-  private void OnMovement(InputValue value) {
-    Movement = value.Get<Vector2>();
-  }
+    // Update is called once per frame
+    void Update()
+    {
+      move = Input.GetAxis("Horizontal");
 
-  private void FixedUpdate() {
-    rb.MovePosition(rb.position + Movement * Time.fixedDeltaTime);
-  }
+      rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
+      if(Input.GetButtonDown("Jump") && !isJumping)
+        {
+          rb.AddForce(new Vector2(rb.velocity.x, jump));
+          isJumping = true;
+        }
+    }
 
+    void OnCollissionEnter2D(Collision2D other)
+    {
+      if(other.gameObject.CompareTag("Ground"))
+      {
+        isJumping = false;
+      }
+    }
 }
