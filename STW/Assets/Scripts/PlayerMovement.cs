@@ -22,17 +22,17 @@ public class PlayerMovement : MonoBehaviour
     {
 
 
-      float dirX = Input.GetAxisRaw("Horizontal");
-      rb.velocity = new Vector2(speed * dirX, rb.velocity.y);
+        float dirX = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(speed * dirX, rb.velocity.y);
 
-      if(Input.GetButtonDown("Jump"))
-            //&& !isJumping)
-       {
+        if (Input.GetButtonDown("Jump"))
+        //&& !isJumping)
+        {
             rb.velocity = new Vector2(rb.velocity.x, jump);
 
-//                rb.AddForce(new Vector2(rb.velocity.x, jump));
-//          isJumping = true;
-       }
+            //                rb.AddForce(new Vector2(rb.velocity.x, jump));
+            //          isJumping = true;
+        }
     }
 
 //    void OnCollissionEnter2D(Collision2D other)
