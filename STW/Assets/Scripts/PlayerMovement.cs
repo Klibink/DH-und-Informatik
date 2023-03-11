@@ -5,29 +5,30 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed;
-    private float move;
-
-//    public float jump;
-
+    public float jump;
     private Rigidbody2D rb;
+
+    //    public float jump;
 //    private bool isJumping;
     // Start is called before the first frame update
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-      move = Input.GetAxis("Horizontal");
 
-      rb.velocity = new Vector2(speed * move, rb.velocity.y);
 
-      if(Input.GetKeyDown("space"))
+      float dirX = Input.GetAxisRaw("Horizontal");
+      rb.velocity = new Vector2(speed * dirX, rb.velocity.y);
+
+      if(Input.GetButtonDown("Jump"))
             //&& !isJumping)
        {
-            rb.velocity = new Vector3(0, 7, 0);
+            rb.velocity = new Vector2(rb.velocity.x, jump);
 
 //                rb.AddForce(new Vector2(rb.velocity.x, jump));
 //          isJumping = true;

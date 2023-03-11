@@ -1,0 +1,210 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Wasteland Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 765f3285aa75174498b999406680e870, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3da2b600806ee8a458087288af0644cb, type: 3}
+  - {fileID: 21300000, guid: 3d31aef093aea2c4789fa5b770e98a83, type: 3}
+  - {fileID: 21300000, guid: 1ef8c8117b5e8f740857445ec7c6f973, type: 3}
+  - {fileID: 21300000, guid: 9ffbfd415e37f894585a51027b806017, type: 3}
+  - {fileID: 21300000, guid: 1b8cbc61f5b5be24ba875aa900407f58, type: 3}
+  - {fileID: 21300000, guid: d479be71416e2324d9bd6fe271069006, type: 3}
+  - {fileID: 21300000, guid: 500aee42b0bc5e94fb5adf83429965f8, type: 3}
+  - {fileID: 21300000, guid: 30030a7215aa93149a5d0394b01f6fed, type: 3}
+  - {fileID: 21300000, guid: 563f6c72cb0ad244e86aee95ac7d738a, type: 3}
+  - {fileID: 21300000, guid: 0a7df4f248ffdd44bb82d387638c3e76, type: 3}
+  - {fileID: 21300000, guid: 29e8db7351769df48b14a2d456ce33ba, type: 3}
+  - {fileID: 21300000, guid: b0f34d939dedb7344b33941ac29c6a75, type: 3}
+  - {fileID: 21300000, guid: a50007d36c6265e488bcc8a85b585eaf, type: 3}
+  - {fileID: 21300000, guid: 83f76035f0558254fa5cbed4b4338ca0, type: 3}
+  - {fileID: 21300000, guid: ba143506dfd3b154c98d7a96cecfe31e, type: 3}
+  - {fileID: 21300000, guid: a7f7ae26448b81248996d847e2302773, type: 3}
+  - {fileID: 21300000, guid: 20e17936127babf4d8c068f76ccbefb7, type: 3}
+  - {fileID: 21300000, guid: 091b2e465257c2b44ac413cf0886173a, type: 3}
+  - {fileID: 21300000, guid: d0ad8386ad610aa44a9772b5fb4107a0, type: 3}
+  - {fileID: 21300000, guid: 49519bb6404447344b126b0329411077, type: 3}
+  - {fileID: 21300000, guid: a60da7a89c4ff2d4f99f0ffbf02d5c99, type: 3}
+  - {fileID: 21300000, guid: 2de779d8596c9a347a2116301da3cd61, type: 3}
+  - {fileID: 21300000, guid: 417423f8b8eb9ef469fabe609b3a2632, type: 3}
+  - {fileID: 21300000, guid: 34d60b19150e6544d9ebcb81b8b4c563, type: 3}
+  - {fileID: 21300000, guid: b89054a911464db4297a8deb17d6c0d4, type: 3}
+  - {fileID: 21300000, guid: bd0342f93dd655c48b3eab7532d8b640, type: 3}
+  - {fileID: 1559620164, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 1153028195, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -1177423851, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 1808542236, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 2029448952, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 1867371900, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -783504209, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 646786108, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -89316175, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -1604083543, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -1326007868, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 636797680, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -1183139482, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 1390969968, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 984251721, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 470333102, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -1771329306, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 949307361, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -281193825, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -652329670, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -1098418287, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -860970599, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 232462642, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -1758575640, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 1870143960, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -1281100506, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 1866663944, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: -65316576, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 1907357359, guid: 9d02ec2aa18c76b42b59e1d6973ac01d, type: 3}
+  - {fileID: 21300000, guid: cd86b74a922da2347b1beb357a793035, type: 3}
+  - {fileID: 21300000, guid: 9d75f55a90e677144910d9ed511b0719, type: 3}
+  - {fileID: 21300000, guid: 6a24a28a6b08b56478bd5452d3aa8aa7, type: 3}
+  - {fileID: 21300000, guid: 5968e90b070b7074bbd276889d8247b4, type: 3}
+  - {fileID: 21300000, guid: f1614e2c8268178408ae79205d24a090, type: 3}
+  - {fileID: 21300000, guid: b9708e3c40b8d2e41aebf69fb4edcc43, type: 3}
+  - {fileID: 21300000, guid: 675af56c4d7616e4fabe0fde40e276a9, type: 3}
+  - {fileID: 21300000, guid: b98a4aac3d2653744889660218497c60, type: 3}
+  - {fileID: 21300000, guid: 7d90b22d4e74f214e9cc2b678ca7cfee, type: 3}
+  - {fileID: 21300000, guid: d65bfc2d2b7f87345913e9005140fd76, type: 3}
+  - {fileID: 21300000, guid: 34d46e3d26b6c1c4aaccc500fe1ce414, type: 3}
+  - {fileID: 21300000, guid: 45d340ad29161074cba7e38a9a8eb5fa, type: 3}
+  - {fileID: 21300000, guid: 864f55bddd003f04fa31309ba7575d89, type: 3}
+  - {fileID: 21300000, guid: c6402cbd4d818174cb400f65c9defcbb, type: 3}
+  - {fileID: 21300000, guid: dd32f1dd6399f2341893821549f0835e, type: 3}
+  - {fileID: 21300000, guid: aed666fd625eaab418a7194e87cdc709, type: 3}
+  - {fileID: 21300000, guid: 2a3b6a1e4f885744f90433a34395a7f9, type: 3}
+  - {fileID: 21300000, guid: 34033e2ebdb7e3b4385663e4a9a80d44, type: 3}
+  - {fileID: 21300000, guid: e744df2f4061158499e4f665f8efd3c2, type: 3}
+  - {fileID: 21300000, guid: c333b37fa740ccc45a441bf6cec817c6, type: 3}
+  - {fileID: 21300000, guid: 87ead88f40321c641b4f46c340c38c2b, type: 3}
+  - {fileID: 21300000, guid: e19d65af81a52b64f82e801252bb3b42, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Desert hill 3
+  - Cactus2
+  - Tree 3
+  - Mountan 3
+  - Tree 2
+  - Desert hill 4
+  - stick 3
+  - Tree 1
+  - Grass 2
+  - Desert hill main zone
+  - Cactus1
+  - Tree 4
+  - Main zone
+  - Desert hill 2
+  - Mountan 4
+  - Cactus 1
+  - Desert hill 2
+  - stick 2
+  - Main zone
+  - Saloon
+  - ShrineBow
+  - Mountan 2
+  - Cactus 2
+  - Desert hill 3
+  - Grass 1
+  - Tree 5
+  - GroundWastelandTileset_8
+  - GroundWastelandTileset_9
+  - GroundWastelandTileset_4
+  - GroundWastelandTileset_5
+  - GroundWastelandTileset_6
+  - GroundWastelandTileset_7
+  - GroundWastelandTileset_0
+  - GroundWastelandTileset_1
+  - GroundWastelandTileset_2
+  - GroundWastelandTileset_3
+  - GroundWastelandTileset_17
+  - GroundWastelandTileset_16
+  - GroundWastelandTileset_15
+  - GroundWastelandTileset_14
+  - GroundWastelandTileset_13
+  - GroundWastelandTileset_12
+  - GroundWastelandTileset_28
+  - GroundWastelandTileset_11
+  - GroundWastelandTileset_10
+  - GroundWastelandTileset_22
+  - GroundWastelandTileset_23
+  - GroundWastelandTileset_20
+  - GroundWastelandTileset_19
+  - GroundWastelandTileset_21
+  - GroundWastelandTileset_18
+  - GroundWastelandTileset_26
+  - GroundWastelandTileset_27
+  - GroundWastelandTileset_24
+  - GroundWastelandTileset_25
+  - Tree 1
+  - Desert hill 2
+  - Tree 2
+  - Desert hill 3
+  - DeadTree1
+  - stick 1
+  - Cactus 3
+  - Desert hill 1
+  - Desert hill 1
+  - Desert hill 4
+  - Tree 3
+  - Tree 6
+  - Desert hill parallax
+  - Desert hill parallax
+  - Mountan 1
+  - DeadTree2
+  - Cactus3
+  - Tree 4
+  - Tree 5
+  - Desert hill 1
+  - Desert hill 4
+  - Cactus 4
+  m_RenderDataMap: {}
+  m_Tag: Wasteland Sprite Atlas
+  m_IsVariant: 0
