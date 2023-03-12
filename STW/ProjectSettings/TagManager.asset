@@ -8,6 +8,8 @@ TagManager:
   - Obstacle
   - SlowObstacle
   - Ground
+  - Water
+  - FallDetector
   layers:
   - Default
   - TransparentFX
@@ -15,10 +17,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - Lighting
-  - Ground
+  - 
   - Postprocessing
   - 
   - 
