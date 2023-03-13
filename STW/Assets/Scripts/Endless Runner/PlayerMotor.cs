@@ -31,41 +31,45 @@ public class PlayerMotor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.position = startTransform.position;
-        Debug.Log("Meine Position ist: " + transform.position);
-        if (isDead)
+        if (GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().isRunning)
         {
-            Debug.Log("bin tot");
-            return;
-        }
-            
+            //transform.position = startTransform.position;
+            Debug.Log("Meine Position ist: " + transform.position);
+            if (isDead)
+            {
+                Debug.Log("bin tot");
+                return;
+            }
 
-        if (Time.timeSinceLevelLoad < animationDuration)
-        {
-            Debug.Log("Test");
-            //transform.position = new Vector3(0f,1.8f);
-            transform.Translate(Vector3.forward * Time.deltaTime * 10);
-            //controller.Move(startTransform.position * speed * Time.deltaTime);
-            return;
-        }
-        isInvincible = false;
-        moveVector = Vector3.zero;
 
-        if (controller.isGrounded)
-        {
-            verticalVelocity = -0.5f;
-        }
-        else
-        {
-            verticalVelocity -= gravity * Time.deltaTime;
-        }
+            if (Time.timeSinceLevelLoad < GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().timeSinceStart + animationDuration)
+            {
+                Debug.Log("Test");
+                //transform.position = new Vector3(0f,1.8f);
+                transform.Translate(Vector3.forward * Time.deltaTime * 10);
+                //controller.Move(startTransform.position * speed * Time.deltaTime);
+                return;
+            }
+            isInvincible = false;
+            moveVector = Vector3.zero;
 
-        moveVector.x = Input.GetAxisRaw("Horizontal") * speed;
-        moveVector.z = speed;
-        moveVector.y = verticalVelocity;
-        controller.Move(moveVector * Time.deltaTime);
+            if (controller.isGrounded)
+            {
+                verticalVelocity = -0.5f;
+            }
+            else
+            {
+                verticalVelocity -= gravity * Time.deltaTime;
+            }
 
-        Debug.Log(speed + " "+ isDead);
+            moveVector.x = Input.GetAxisRaw("Horizontal") * speed;
+            moveVector.z = speed;
+            moveVector.y = verticalVelocity;
+            controller.Move(moveVector * Time.deltaTime);
+
+            Debug.Log(speed + " " + isDead);
+        }
+        
     }
 
     public void SetSpeed(float modifier)

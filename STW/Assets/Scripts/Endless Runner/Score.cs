@@ -20,15 +20,19 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDead)
-            return;
-
-        if(score >= scoreToNextLevel)
+        if (GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().isRunning)
         {
-            LevelUp();
+            if (isDead)
+                return;
+
+            if (score >= scoreToNextLevel)
+            {
+                LevelUp();
+            }
+            score += Time.deltaTime * difficultyLevel;
+            scoreText.text = ((int)score).ToString();
         }
-        score += Time.deltaTime * difficultyLevel;
-        scoreText.text = ((int)score).ToString();
+            
     }
 
     private void LevelUp()

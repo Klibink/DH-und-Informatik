@@ -15,16 +15,20 @@ public class Fire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<PlayerMotor>().isSlowed)
+        if (GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().isRunning)
         {
-            speed = player.GetComponent<PlayerMotor>().GetSpeed() + 2;
-        }
-        else
-        {
-            speed = player.GetComponent<PlayerMotor>().GetSpeed() - 1;
-        }
+            if (player.GetComponent<PlayerMotor>().isSlowed)
+            {
+                speed = player.GetComponent<PlayerMotor>().GetSpeed() + 2;
+            }
+            else
+            {
+                speed = player.GetComponent<PlayerMotor>().GetSpeed() - 1;
+            }
 
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        Debug.Log("Das Feuer hat eine Geschwindigkeit von " + speed);
+            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            Debug.Log("Das Feuer hat eine Geschwindigkeit von " + speed);
+        }
+            
     }
 }

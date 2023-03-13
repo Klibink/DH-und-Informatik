@@ -39,6 +39,7 @@ public class DeathMenu : MonoBehaviour
 
     public void RestartGame()
     {
+        GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().timeSinceStart = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void ToMenu()

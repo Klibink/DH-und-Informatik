@@ -22,20 +22,24 @@ public class CameraMotor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveVector = lookAt.position + startOffset;
-        moveVector.x = 0f;
-        moveVector.y = Mathf.Clamp(moveVector.y, 3, 5);
+        if (GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().isRunning)
+        {
+            moveVector = lookAt.position + startOffset;
+            moveVector.x = 0f;
+            moveVector.y = Mathf.Clamp(moveVector.y, 3, 5);
 
-        if (transition > 1.0f)
-        {
-            transform.position = moveVector;
+            if (transition > 1.0f)
+            {
+                transform.position = moveVector;
+            }
+            else
+            {
+                //Animation at start of the game
+                transform.position = Vector3.Lerp(moveVector + animationCameraOffset, moveVector, transition);
+                transition += Time.deltaTime * 1 / animationDuration;
+                transform.LookAt(lookAt.position + Vector3.up);
+            }
         }
-        else
-        {
-            //Animation at start of the game
-            transform.position = Vector3.Lerp(moveVector + animationCameraOffset, moveVector, transition);
-            transition += Time.deltaTime * 1 / animationDuration;
-            transform.LookAt(lookAt.position + Vector3.up);
-        }
+            
     }
 }
