@@ -96,6 +96,12 @@ public class PlayerMotor : MonoBehaviour
             Slowed();
             Destroy(hit.transform.gameObject);
         }
+        else if(hit.transform.tag == "Coin" && !isInvincible)
+        {
+            Debug.Log("Gold Coin eingesammelt");
+            GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().currentCoins++;
+            Destroy(hit.transform.gameObject);
+        }
         
     }
 

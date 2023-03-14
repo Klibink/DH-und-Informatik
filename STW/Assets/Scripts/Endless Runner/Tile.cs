@@ -7,6 +7,7 @@ public class Tile : MonoBehaviour
     public GameObject[] spawnPoints;
     public GameObject[] spawnRows;
     public GameObject[] obstacles;
+    public GameObject coinPrefab;
     public GameObject gameManager;
 
     private int maxObstacles = 5;
@@ -50,6 +51,7 @@ public class Tile : MonoBehaviour
             {
                 go = Instantiate(obstacles[Random.Range(0, obstacles.Length)]) as GameObject;
                 go.transform.position = spawnPoints[i].transform.position;
+                go.transform.rotation = Quaternion.Euler(Random.Range(0, 360), 0, 0);
                 currentObstacles++;
                 go.transform.SetParent(transform);
             }
@@ -95,9 +97,23 @@ public class Tile : MonoBehaviour
                     {
                         go = Instantiate(obstacles[Random.Range(0, obstacles.Length)]) as GameObject;
                         go.transform.position = child.transform.position;
+                        go.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
                         currentObstaclesInRow++;
                         currentObstacles++;
                         go.transform.SetParent(child.transform);
+                    }
+                    else
+                    {
+                        Debug.Log("Gold Schleife erreicht");
+                        if(GameObject.Find("player").GetComponent<Score>().GetScore() > GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().coinThreshold && GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().currentCoins < 5)
+                        {
+                            Debug.Log("Gold Coin spawned");
+                            GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().coinThreshold += 100;
+                            go = Instantiate(coinPrefab) as GameObject;
+                            go.transform.position = child.transform.position;
+                            go.transform.position = new Vector3(child.transform.position.x, child.transform.position.y + 1, child.transform.position.z);
+                            go.transform.SetParent(child.transform);
+                        }
                     }
                 }
             }

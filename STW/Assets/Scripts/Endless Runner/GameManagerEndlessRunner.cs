@@ -15,6 +15,11 @@ public class GameManagerEndlessRunner : MonoBehaviour
     public int tileSpawnPercentage = 1;
     public int scoreThreshold = 50;
 
+    public int maxCoins = 5;
+    public int currentCoins = 0;
+    public int coinThreshold = 100;
+    public bool allCoinsCollected = false;
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -33,6 +38,7 @@ public class GameManagerEndlessRunner : MonoBehaviour
 
     void Start()
     {
+        CheckCoinStatus();
         //Time.timeScale = 0f;
         canvasToShow = GameObject.Find("Start");
     }
@@ -63,6 +69,40 @@ public class GameManagerEndlessRunner : MonoBehaviour
         if (canvasWasShown && canvasToShow!=null)
         {
             canvasToShow.SetActive(false);
+        }
+    }
+
+    public void CheckCoinStatus()
+    {
+        switch (currentCoins)
+        {
+            case 0:
+                coinThreshold = 100;
+                break;
+            case 1:
+                coinThreshold = 200;
+                break;
+            case 2:
+                coinThreshold = 300;
+                break;
+            case 3:
+                coinThreshold = 400;
+                break;
+            case 4:
+                coinThreshold = 500;
+                break;
+            case 5:
+                coinThreshold = 600;
+                break;
+            default:
+                coinThreshold = 100;
+                break;
+
+        }
+
+        if(currentCoins >= maxCoins)
+        {
+            allCoinsCollected = true;
         }
     }
 }
