@@ -12,6 +12,9 @@ public class GameManagerEndlessRunner : MonoBehaviour
     public GameObject canvasToShow;
     public bool canvasWasShown = false;
 
+    public int tileSpawnPercentage = 1;
+    public int scoreThreshold = 50;
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -57,7 +60,7 @@ public class GameManagerEndlessRunner : MonoBehaviour
 
     public void CheckCanvasLoaded()
     {
-        if (canvasWasShown)
+        if (canvasWasShown && canvasToShow!=null)
         {
             canvasToShow.SetActive(false);
         }

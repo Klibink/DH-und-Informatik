@@ -35,6 +35,11 @@ public class Score : MonoBehaviour
             
     }
 
+    public float GetScore()
+    {
+        return score;
+    }
+
     private void LevelUp()
     {
         if (difficultyLevel == maxDifficultyLevel)
