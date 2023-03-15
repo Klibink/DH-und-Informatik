@@ -16,6 +16,7 @@ public class ItemCollector : MonoBehaviour
         Destroy(collision.gameObject);
         counter++;
         WaterText.text = "Wasser: " + counter + "Liter";
+            GameObject.Find("GameManager").GetComponent<GameManagerJumpGame>().WaterCount++; 
       }
     }
 }
