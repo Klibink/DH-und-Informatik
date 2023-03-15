@@ -11,6 +11,9 @@ TagManager:
   - Water
   - FallDetector
   - Coin
+  - Background
+  - Platform
+  - Skylimit
   layers:
   - Default
   - TransparentFX
