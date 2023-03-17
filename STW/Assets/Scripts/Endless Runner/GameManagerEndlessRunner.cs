@@ -114,6 +114,12 @@ public class GameManagerEndlessRunner : MonoBehaviour
     public void ChangeCurrentScene(int sceneIndex)
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (winCanvasShown)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
         SceneManager.LoadScene(sceneIndex);
     }
 
