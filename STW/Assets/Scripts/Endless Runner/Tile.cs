@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Verantwortlich für die zu spawnenden Hindernisse und anderen Objekten auf den Tiles
 public class Tile : MonoBehaviour
 {
     public GameObject[] spawnPoints;
@@ -80,6 +81,8 @@ public class Tile : MonoBehaviour
             }
         }
     }*/
+
+    //Spawnt zufällig Hindernisse und die Münzobjekte auf den einzelnen Tiles
     private void SpawnObstacleInRow()
     {
         CheckPlayerScore();
@@ -121,7 +124,7 @@ public class Tile : MonoBehaviour
 
         
     }
-
+    //Überprüft den Spielerscore und erhöht anhand dessen die prozentuale Chance Hindernisse zu spawnen
     private void CheckPlayerScore()
     {
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Score>().GetScore() > gameManager.GetComponent<GameManagerEndlessRunner>().scoreThreshold && spawnPercentage < 6)

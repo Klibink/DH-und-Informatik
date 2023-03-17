@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Spawnt Tiles aufeinanderfolgend an der letzten gegebenen Position
 public class TileManager : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
