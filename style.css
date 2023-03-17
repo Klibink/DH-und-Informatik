@@ -199,9 +199,10 @@ div#download-container{
     display: flex;
     justify-content: start;
     align-items: center;
+    flex-direction: column;
 }
 
-a#download-button{
+a.download-button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,13 +210,13 @@ a#download-button{
     padding: .5em 1em;
     transition: .3s linear;
 }
-a#download-button:hover{
+a.download-button:hover{
     background-color: rgba(37,37,37, .5);
     color: #e5e5e5;
     transition: .3s linear;
 
 }
-img#download-icon{
+img.download-icon{
     width: 50px;
     height: auto;
     margin-bottom: -15px;
@@ -236,6 +237,9 @@ img#download-icon{
         margin: 0;
     }
     div#documentation {
+        flex-direction: row;
+    }
+    div#download-container{
         flex-direction: row;
     }
 }
