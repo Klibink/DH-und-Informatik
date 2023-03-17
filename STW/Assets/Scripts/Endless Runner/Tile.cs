@@ -108,7 +108,7 @@ public class Tile : MonoBehaviour
                         if(GameObject.Find("player").GetComponent<Score>().GetScore() > GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().coinThreshold && GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().currentCoins < 5)
                         {
                             Debug.Log("Gold Coin spawned");
-                            GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().coinThreshold += 50;
+                            GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().coinThreshold += 25;
                             go = Instantiate(coinPrefab) as GameObject;
                             go.transform.position = child.transform.position;
                             go.transform.position = new Vector3(child.transform.position.x, child.transform.position.y + 1, child.transform.position.z);

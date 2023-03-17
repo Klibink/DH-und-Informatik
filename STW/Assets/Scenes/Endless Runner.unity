@@ -1691,8 +1691,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1191112681}
-        m_TargetAssemblyTypeName: GameManagerEndlessRunner, Assembly-CSharp
+      - m_Target: {fileID: 1364006425}
+        m_TargetAssemblyTypeName: DeathMenu, Assembly-CSharp
         m_MethodName: ChangeCurrentScene
         m_Mode: 3
         m_Arguments:
@@ -3343,10 +3343,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
+  m_fontSize: 22.05
   m_fontSizeBase: 32
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

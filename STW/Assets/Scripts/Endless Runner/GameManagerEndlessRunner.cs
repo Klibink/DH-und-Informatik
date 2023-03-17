@@ -79,54 +79,65 @@ public class GameManagerEndlessRunner : MonoBehaviour
 
     public void CheckCoinStatus()
     {
-        switch (currentCoins)
-        {
-            case 0:
-                coinThreshold = 50;
-                break;
-            case 1:
-                coinThreshold = 100;
-                break;
-            case 2:
-                coinThreshold = 150;
-                break;
-            case 3:
-                coinThreshold = 200;
-                break;
-            case 4:
-                coinThreshold = 250;
-                break;
-            case 5:
-                coinThreshold = 300;
-                break;
-            default:
-                coinThreshold = 50;
-                break;
-
-        }
-
-        if(currentCoins >= maxCoins)
+        if (currentCoins >= maxCoins)
         {
             allCoinsCollected = true;
         }
+
+        switch (currentCoins)
+        {
+            case 0:
+                coinThreshold = 25;
+                break;
+            case 1:
+                coinThreshold = 50;
+                break;
+            case 2:
+                coinThreshold = 75;
+                break;
+            case 3:
+                coinThreshold = 100;
+                break;
+            case 4:
+                coinThreshold = 125;
+                break;
+            case 5:
+                coinThreshold = 150;
+                break;
+            default:
+                coinThreshold = 25;
+                break;
+
+        }
+
+        
     }
 
     public void ChangeCurrentScene(int sceneIndex)
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
+        Debug.Log("Test geschafft");
         if (winCanvasShown)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Debug.Log("WinCanvas wurde erreicht");
+            sceneIndex = currentSceneIndex;
         }
-
-        SceneManager.LoadScene(sceneIndex);
+        
+            SceneManager.LoadScene(sceneIndex);
     }
 
     public void CheckWinCondition()
     {
+        if (currentCoins >= maxCoins)
+        {
+            allCoinsCollected = true;
+        }
+        else return;
+
+        Debug.Log("WinCon " + allCoinsCollected);
         if (allCoinsCollected && !winCanvasShown)
         {
+            Debug.Log("WinCondition erreicht");
             winCanvasShown = true;
             StartCoroutine(ShowWinCanvas());
         }

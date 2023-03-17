@@ -47,4 +47,17 @@ public class DeathMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void ChangeCurrentScene(int sceneIndex)
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("Test geschafft");
+        if (GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().winCanvasShown)
+        {
+            Debug.Log("WinCanvas wurde erreicht");
+            sceneIndex = currentSceneIndex + 1;
+        }
+
+        SceneManager.LoadScene(sceneIndex);
+    }
 }
