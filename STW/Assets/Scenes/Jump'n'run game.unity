@@ -5348,11 +5348,10 @@ MonoBehaviour:
   dialogue:
     name: Willkomen bei Flappy Bat
     sentences:
-    - Es ist das Jahr 2023, der Hambacher Forst ist fast komplett verschwunden und
-      der Lebensraum von Frank, der Fledermaus ist kritisch bedroht.
-    - "Frank braucht deine Hilfe, vom Hambacher Forst nach K\xF6ln und bis zum Naturschutzgebiet
-      K\xF6nigsforst zu fliegen."
-    - 'Benutze dazu die LEERTASTE. Vorsicht vor den Hindernissen! '
+    - "Sammle Regenwasser, um die Speicher der Bauern aufzuf\xFCllen."
+    - 'Mit den Pfeiltasten bewegst du dich und mit der Leertaste springst du. '
+    - "Pass auf, dass du nicht in die Tiefen, die durch ausgetrocknete Gew\xE4sser
+      verursacht worden sind, f\xE4llst."
 --- !u!114 &2043253078
 MonoBehaviour:
   m_ObjectHideFlags: 0
