@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Steuert die Geschwindigkeit des Feuer-Spielobjekts, das dem Spieler folgt
 public class Fire : MonoBehaviour
 {
     private GameObject player;

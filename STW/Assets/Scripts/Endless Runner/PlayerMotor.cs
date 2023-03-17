@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Steuert den Spielcharakter
 public class PlayerMotor : MonoBehaviour
 {
     private Transform startTransform;
@@ -71,7 +72,7 @@ public class PlayerMotor : MonoBehaviour
         }
         
     }
-
+    //Verändert die Geschwindigkeits Variabel
     public void SetSpeed(float modifier)
     {
         speed = 10.0f + modifier;
@@ -82,6 +83,7 @@ public class PlayerMotor : MonoBehaviour
         return speed;
     }
 
+    //Überprüft Kollision des Spielcharakters mit anderen Objekten
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if(hit.transform.tag == "Obstacle" && !isInvincible)
@@ -104,14 +106,14 @@ public class PlayerMotor : MonoBehaviour
         }
         
     }
-
+    //Wird aufgerufen, wenn der Spielcharakter im Spiel gestorben ist
     private void Death()
     {
         isDead = true;
         GetComponent<Score>().OnDeath();
         Debug.Log("Dead");
     }
-
+    //Verlangsamt den Spielcharakter
     private void Slowed()
     {
         StartCoroutine(SlowDown());

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+//Aktualisiert die aktuelle Anzahl der gesammelten Münzen
 public class CoinManager : MonoBehaviour
 {
     public TMP_Text coinText;

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// Ändert fortlaufend die Rotation des Münzobjekts
 public class Coin : MonoBehaviour
 {
     public int rotationSpeed = 100;

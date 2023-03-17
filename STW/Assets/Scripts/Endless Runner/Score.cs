@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//aktualisiert die Punktzahl
 public class Score : MonoBehaviour
 {
     private float score = 0.0f;

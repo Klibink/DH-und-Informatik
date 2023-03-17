@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Steuert das Spielgeschehen, auf dieses Skript lässt sich global zugreifen
 public class GameManagerEndlessRunner : MonoBehaviour
 {
     public static GameManagerEndlessRunner instance = null;
@@ -56,19 +57,21 @@ public class GameManagerEndlessRunner : MonoBehaviour
         CheckWinCondition();
     }
 
+    //startet das Spiel, indem die Variablen auf "true" gesetzt werden
     public void StartGame()
     {
         isRunning = true;
         canvasWasShown = true;
     }
 
+    //Verändert den Status der Objekte in der Szene
     public void ChangeActiveState(GameObject objectToChange)
     {
         bool isActive = objectToChange.activeInHierarchy;
         objectToChange.SetActive(!isActive);
         timeSinceStart = Time.timeSinceLevelLoad;
     }
-
+    //Überprüft ob das Canvasmenü bereits geladen wurde -> Sorgt dafür, dass bei Neustart der Szene der Startknopf nicht erneut angezeigt wird
     public void CheckCanvasLoaded()
     {
         if (canvasWasShown && canvasToShow!=null)
@@ -76,7 +79,7 @@ public class GameManagerEndlessRunner : MonoBehaviour
             canvasToShow.SetActive(false);
         }
     }
-
+    //Überprüft die Anzahl der gesammelten Münzen
     public void CheckCoinStatus()
     {
         if (currentCoins >= maxCoins)
@@ -112,7 +115,7 @@ public class GameManagerEndlessRunner : MonoBehaviour
 
         
     }
-
+    //Damit lässt sich die aktuellste Szene ändern
     public void ChangeCurrentScene(int sceneIndex)
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -125,7 +128,7 @@ public class GameManagerEndlessRunner : MonoBehaviour
         
             SceneManager.LoadScene(sceneIndex);
     }
-
+    //Überprüft die Gewinnkondition
     public void CheckWinCondition()
     {
         if (currentCoins >= maxCoins)

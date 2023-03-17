@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+//Steuert das Menü, das auftaucht, wenn der Spieler gestorben ist
 public class DeathMenu : MonoBehaviour
 {
     public TMP_Text scoreText;
@@ -30,6 +31,7 @@ public class DeathMenu : MonoBehaviour
         backgroundImg.color = Color.Lerp(new Color(0, 0, 0, 0), Color.black,transition);
     }
 
+    //Aktiviert das Endmenü-Canvas
     public void ToggleEndMenu(float score)
     {
         gameObject.SetActive(true);
@@ -37,6 +39,7 @@ public class DeathMenu : MonoBehaviour
         isShown = true;
     }
 
+    //Startet das Spiel neu, wenn der Spieler auf "Play" drückt
     public void RestartGame()
     {
         GameObject.Find("GameManager").GetComponent<GameManagerEndlessRunner>().timeSinceStart = 0;
@@ -47,7 +50,7 @@ public class DeathMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
-
+    //Ändert die aktuelle Szene zur gewünschten Szene
     public void ChangeCurrentScene(int sceneIndex)
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;

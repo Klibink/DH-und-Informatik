@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Script zur Änderung der Animationen
 public class AnimationStateController : MonoBehaviour
 {
     Animator animator;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Dieses Skript steuert die Kamera. Zu Beginn wird eine kurze Animation abgespielt und danach folgt die Kamera dem Spielcharakter
 public class CameraMotor : MonoBehaviour
 {
     private Transform lookAt;
