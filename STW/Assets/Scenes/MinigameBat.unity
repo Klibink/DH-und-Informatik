@@ -4958,7 +4958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &832993692
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5010,27 +5010,16 @@ MonoBehaviour:
   dialogue:
     name: Was ist bisher geschehen?
     sentences:
-    - "2050: Die Politik und die Menschheit hat versagt, das 1,5 Grad Ziel wurde
-      weit verfehlt. Wir haben eine Erw\xE4rmung von 2,4 Grad Celsius. Natur und
-      Zivilisation sind zerst\xF6rt. 80% der Tiere sind ausgestorben, es leben nur
-      noch krebsartige Tiere und Einzeller im plastikverseuchten Meer. \r\nund irgendwo
-      800 km n\xF6rdlich von Norwegen befindet sich das \u201EGlobal Archive\u201C,
-      in dem alles gesammelt ist, was von der Menschheitsgeschichte \xFCbriggeblieben
-      ist.\r"
-    - "Dort lebt einer der wenigen \xDCberlebenden: Der Archivist. \r\nEr hat sich
-      die ganze Zeit gefragt warum und wie das passieren konnte. Also hat er sich
-      das Archiv aufgebaut. Er kann jederzeit durch das Archiv gehen (was wenige
-      Gegenst\xE4nde und vor allem Bildaufzeichnungen beinhaltet) und hatte genug
-      Zeit, um sich \xFCber die Fehler der Vergangenheit Gedanken zu machen und Punkte
-      zu finden, an denen man h\xE4tte ansetzen k\xF6nnen um die Katastrophe zu vermeiden.
-      \r"
-    - "\u201EIch habe eine Nachricht an die Menschheit von 2022 geschickt, sie wissen,
-      dass du kommen und ihnen helfen wirst. Ich habe Portale errichtet, durch die
-      du in verschiedene Szenarien im Jahr 2022 reisen und etwas ver\xE4ndern kannst.\r\nAls
-      Belohnung werden sie dir Dinge mitgeben, die bei uns in der Zukunft schon l\xE4ngst
-      verloren gegangen sind. Damit wirst du die Welt wieder heilen und somit alle
-      Zeitdimensionen Vergangenheit, Gegenwart und Zukunft retten k\xF6nnen.\u201C
-      \r\n"
+    - "Die biologische Vielfalt entscheidet \xFCber die Zukunft der Menschen. Sauberes
+      Trinkwasser, fruchtbare B\xF6den, unsere Ern\xE4hrung und Gesundheit, unsere
+      Wirtschaftslage, h\xE4ngt alles von einem gesunden \xD6kosystem mit zahlreichen
+      Tier- und Pflanzenarten ab. "
+    - "Inzwischen sind ca. eine Millionen Tiere vom Aussterben bedroht. 2050 sind
+      die meisten bereits ausgestorben, die \xD6kosysteme leiden und treiben den
+      Klimawandel voran."
+    - "Noch mehr Schutzgebiete h\xE4tten errichtet werden m\xFCssen. Stattdessen
+      wurde immer mehr Land zerst\xF6rt, wie zum Beispiel der Hambacher Forst, der
+      inzwischen die gr\xF6\xDFte Baunkohlegrube Europas ist.\n"
 --- !u!114 &832993695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8908,7 +8897,7 @@ PrefabInstance:
     - target: {fileID: 1982623884314187131, guid: 016aa55859ab553499d74aea21f33134,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.3834076
+      value: 1.3834229
       objectReference: {fileID: 0}
     - target: {fileID: 3928406125874308512, guid: 016aa55859ab553499d74aea21f33134,
         type: 3}
@@ -10304,10 +10293,10 @@ MonoBehaviour:
     name: Willkomen bei Flappy Bat
     sentences:
     - Es ist das Jahr 2023, der Hambacher Forst ist fast komplett verschwunden und
-      der Lebensraum von Frank, der Fledermaus ist kritisch bedroht.
+      der Lebensraum von Fledermaus Frank ist kritisch bedroht.
     - "Frank braucht deine Hilfe, vom Hambacher Forst nach K\xF6ln und bis zum Naturschutzgebiet
       K\xF6nigsforst zu fliegen."
-    - 'Benutze dazu die LEERTASTE. Vorsicht vor den Hindernissen! '
+    - 'Benutze dazu die Leertaste. Vorsicht vor den Hindernissen! '
 --- !u!114 &1741693415
 MonoBehaviour:
   m_ObjectHideFlags: 0
