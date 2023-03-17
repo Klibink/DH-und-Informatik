@@ -44,12 +44,7 @@ public class GameManager : MonoBehaviour
         gameOverCountdown.gameObject.SetActive(false);
         // Game Freeze = 0, Spielmodus = 1
         
-        audio = GetComponents<AudioSource>();
-        if (audio == null)
-        {
-            Debug.LogError("Sound not found");
-        }
-        audio[1].Play();
+        startMusic();
 
         dialogue = GetComponents<DialogueTrigger>();
 
@@ -109,6 +104,8 @@ public class GameManager : MonoBehaviour
         animPlatform.enabled = true;
     }
 
+
+
     private void stopAnimation()
     {
         //animation in the background freezes
@@ -116,6 +113,30 @@ public class GameManager : MonoBehaviour
         animBackground.enabled = false;
         animPlatform.enabled = false;
     }
+
+    public void startMusic()
+    {
+        audio = GetComponents<AudioSource>();
+        if (audio == null)
+        {
+            Debug.LogError("Sound not found");
+        }
+        audio[1].Play();
+    }
+
+    public void toggleMusic()
+    {
+        //audio = GetComponents<AudioSource>();
+        if (audio[1].isPlaying)
+        {
+            Debug.Log("Sound is playing");
+            audio[1].Stop();
+        } else
+        {
+            audio[1].Play();
+        }
+    }
+
 
     public void StartGame()
     {
@@ -138,7 +159,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void EndGame()
@@ -146,10 +167,10 @@ public class GameManager : MonoBehaviour
         // decides if the game will progress or if the player returns to the previous state of game progress
         if (player.hasWon == true)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         } else
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
     }
 }

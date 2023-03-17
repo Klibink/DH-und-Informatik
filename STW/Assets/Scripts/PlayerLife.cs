@@ -8,6 +8,9 @@ public class PlayerLife : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject FallDetector;
 
+    public GameManager gameManager;
+
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -37,5 +40,6 @@ public class PlayerLife : MonoBehaviour
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameObject.Find("GameManager").GetComponent<GameManagerJumpGame>().WaterCount = 0;
     }
 }

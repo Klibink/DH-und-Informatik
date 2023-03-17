@@ -170,7 +170,7 @@ div#documentation-container{
 }
 div#documentation{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: space-between;
 }
 div.doc-pages{
@@ -234,6 +234,9 @@ img#download-icon{
     div.team-member{
         width: calc(50% - 10px);
         margin: 0;
+    }
+    div#documentation {
+        flex-direction: row;
     }
 }
 @media only screen and (min-width: 769px) {
