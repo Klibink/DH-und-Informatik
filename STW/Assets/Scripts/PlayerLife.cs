@@ -40,5 +40,6 @@ public class PlayerLife : MonoBehaviour
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameObject.Find("GameManager").GetComponent<GameManagerJumpGame>().WaterCount = 0;
     }
 }
