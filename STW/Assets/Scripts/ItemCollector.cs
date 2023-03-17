@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
@@ -18,5 +19,6 @@ public class ItemCollector : MonoBehaviour
         WaterText.text = "Wasser: " + counter + "Liter";
             GameObject.Find("GameManager").GetComponent<GameManagerJumpGame>().WaterCount++; 
       }
+      else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

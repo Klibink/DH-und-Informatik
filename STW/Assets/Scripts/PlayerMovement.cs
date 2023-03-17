@@ -20,28 +20,27 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         coll = GetComponent<BoxCollider2D>();
-        
-
     }
 
     // Update is called once per frame
     private void Update()
     {
-
-
-        float dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(speed * dirX, rb.velocity.y);
-
-        animator.SetFloat("Speed", Mathf.Abs(dirX));
-
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (GameObject.Find("GameManager").GetComponent<GameManagerJumpGame>().gameStarted)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jump);
-        }
+            float dirX = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(speed * dirX, rb.velocity.y);
+
+            animator.SetFloat("Speed", Mathf.Abs(dirX));
+
+            if (Input.GetButtonDown("Jump") && IsGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jump);
+            }
+
+        
 
         //flip the player if walking right or left
         if (dirX > 0f)
@@ -52,8 +51,7 @@ public class PlayerMovement : MonoBehaviour
         {
             sprite.flipX = true;
         }
-
-       
+        }
 
     }
 

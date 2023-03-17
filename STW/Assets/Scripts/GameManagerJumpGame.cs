@@ -8,12 +8,14 @@ public class GameManagerJumpGame : MonoBehaviour
 
     public GameObject StartButton;
     public GameObject HelpButton;
-    public GameObject endCirle;
+    public GameObject endCircle;
     public static GameManagerJumpGame instance = null;
     public bool canvasWasShown = false;
     public GameObject canvasToShow;
     public int WaterCount;
     public int maxWaterCount = 14;
+
+    public bool gameStarted = false;
 
 
     private void Awake()
@@ -33,12 +35,12 @@ public class GameManagerJumpGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 0;
+       // Time.timeScale = 0;
 
         canvasToShow = GameObject.Find("Start");
         WaterCount = 0;
-        endCirle.SetActive(false);
-
+        if (endCircle != null)
+            endCircle.SetActive(false);
     }
 
     // Update is called once per frame
@@ -55,8 +57,8 @@ public class GameManagerJumpGame : MonoBehaviour
         StartButton.SetActive(false);
         HelpButton.SetActive(false);
         
-
         canvasWasShown = true;
+        gameStarted = true; 
      
     }
 
@@ -73,15 +75,17 @@ public class GameManagerJumpGame : MonoBehaviour
         if (WaterCount == maxWaterCount)
         {
             Debug.Log("Gewonnen");
-            endCirle.SetActive(true); 
+            if (endCircle != null) 
+            endCircle.SetActive(true); 
         }
     }
 
-    void OnColliderEnter2D(Collider2D collider)
+  /*  void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collider.tag == "EndsceneCircle")
+        if (collision.gameObject.CompareTag("EndsceneCircle"))
         {
-            SceneManager.LoadScene("Overworld2");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+  */
 }
