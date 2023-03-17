@@ -338,7 +338,8 @@ MonoBehaviour:
     Kappes\n\nEndless Runner: Julian Klink\n\nFledermaus Frank: Michael Pichlmeier\n\nJump'N'Run
     Game: Senya B\xE4r\n\nSoundtrack: Michael Pichlmeier\n\n2D Sprites: Lennart Kappes,
     Senya B\xE4r, Michael Pichlmeier\n\n3D Player Model: Michael Pichlmeier\n\n3D
-    Game Design: Julian Klink\n\nReadme: Lennart Kappes\n\nStory: Senya B\xE4r"
+    Game Design: Julian Klink\n\nReadme: Lennart Kappes\n\nStory: Senya B\xE4r\n\nDr\xFCcke
+    die ESC-Taste, um das Spiel zu schlie\xDFen"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0aa9cb08ceaa9f341b5dee211b628399, type: 2}
   m_sharedMaterial: {fileID: 4717180352440805092, guid: 0aa9cb08ceaa9f341b5dee211b628399,
@@ -744,6 +745,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281009435}
   m_CullTransparentMesh: 1
+--- !u!1 &1585638399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1585638401}
+  - component: {fileID: 1585638400}
+  m_Layer: 0
+  m_Name: EndGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1585638400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585638399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1bf18c4e97fc98468f1efb3bd7dc39a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1585638401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585638399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 332.39142, y: 197.20207, z: 1.2279848}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1624369460
 GameObject:
   m_ObjectHideFlags: 0

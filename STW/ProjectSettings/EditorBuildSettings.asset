@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Overworld.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/Jump'n'run game.unity
+    guid: cbc92d8bb0ff8406cb0c69bf24cc0e25
+  - enabled: 1
     path: Assets/Scenes/Overworld2.unity
     guid: 61a500f275ce5484aa507a51ac99f96e
+  - enabled: 1
+    path: Assets/Scenes/Endless Runner.unity
+    guid: c23373a0127ccb64fb99b0e2b0c3feb3
   - enabled: 0
     path: Assets/Scenes/Overworld3.unity
     guid: 9cee964149c4f744aa8231d91437e6e2
@@ -26,12 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Overworld4.unity
     guid: de5c25714d6f6c2408dc0936f1a3ab1b
-  - enabled: 1
-    path: Assets/Scenes/Endless Runner.unity
-    guid: c23373a0127ccb64fb99b0e2b0c3feb3
-  - enabled: 1
-    path: Assets/Scenes/Jump'n'run game.unity
-    guid: cbc92d8bb0ff8406cb0c69bf24cc0e25
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: aa5558f2daa4c124ab5253a398c25fd2
