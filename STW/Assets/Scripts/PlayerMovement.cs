@@ -28,31 +28,33 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (GameObject.Find("GameManager").GetComponent<GameManagerJumpGame>().gameStarted)
+        if(GameObject.Find("GameManager") != null)
         {
-            float dirX = Input.GetAxisRaw("Horizontal");
-            rb.velocity = new Vector2(speed * dirX, rb.velocity.y);
-
-            animator.SetFloat("Speed", Mathf.Abs(dirX));
-
-            if (Input.GetButtonDown("Jump") && IsGrounded())
+            if (GameObject.Find("GameManager").GetComponent<GameManagerJumpGame>().gameStarted)
             {
-                rb.velocity = new Vector2(rb.velocity.x, jump);
+                float dirX = Input.GetAxisRaw("Horizontal");
+                rb.velocity = new Vector2(speed * dirX, rb.velocity.y);
+
+                animator.SetFloat("Speed", Mathf.Abs(dirX));
+
+                if (Input.GetButtonDown("Jump") && IsGrounded())
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, jump);
+                }
+
+
+
+                //flip the player if walking right or left
+                if (dirX > 0f)
+                {
+                    sprite.flipX = false;
+                }
+                if (dirX < 0f)
+                {
+                    sprite.flipX = true;
+                }
             }
-
-        
-
-        //flip the player if walking right or left
-        if (dirX > 0f)
-        {
-            sprite.flipX = false;
         }
-        if (dirX < 0f)
-        {
-            sprite.flipX = true;
-        }
-        }
-
     }
 
     private bool IsGrounded()
