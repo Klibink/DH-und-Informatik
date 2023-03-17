@@ -12,13 +12,18 @@ public class ItemCollector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      if(collision.gameObject.CompareTag("Water"))
-      {
-        Destroy(collision.gameObject);
-        counter++;
-        WaterText.text = "Wasser: " + counter + "Liter";
-            GameObject.Find("GameManager").GetComponent<GameManagerJumpGame>().WaterCount++; 
-      }
-      else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            Destroy(collision.gameObject);
+            counter++;
+            WaterText.text = "Wasser: " + counter + "Liter";
+            GameObject.Find("GameManager").GetComponent<GameManagerJumpGame>().WaterCount++;
+        }
+        else 
+        {
+            Destroy(GameObject.Find("GameManager").gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        
     }
 }
