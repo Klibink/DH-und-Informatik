@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagerEndlessRunner : MonoBehaviour
 {
@@ -11,13 +12,16 @@ public class GameManagerEndlessRunner : MonoBehaviour
     public float timeSinceStart;
     public GameObject canvasToShow;
     public bool canvasWasShown = false;
+    public bool winCanvasShown = false;
 
     public int tileSpawnPercentage = 1;
     public int scoreThreshold = 50;
 
     public int maxCoins = 5;
     public int currentCoins = 0;
-    public int coinThreshold = 100;
+    public int tempCoins = 0;
+    public int coinThreshold = 50;
+    public bool canSpawnCoin = true;
     public bool allCoinsCollected = false;
 
     // Start is called before the first frame update
@@ -49,6 +53,7 @@ public class GameManagerEndlessRunner : MonoBehaviour
 
         canvasToShow = GameObject.Find("Start");
         CheckCanvasLoaded();
+        CheckWinCondition();
     }
 
     public void StartGame()
@@ -77,25 +82,25 @@ public class GameManagerEndlessRunner : MonoBehaviour
         switch (currentCoins)
         {
             case 0:
-                coinThreshold = 100;
+                coinThreshold = 50;
                 break;
             case 1:
-                coinThreshold = 200;
+                coinThreshold = 100;
                 break;
             case 2:
-                coinThreshold = 300;
+                coinThreshold = 150;
                 break;
             case 3:
-                coinThreshold = 400;
+                coinThreshold = 200;
                 break;
             case 4:
-                coinThreshold = 500;
+                coinThreshold = 250;
                 break;
             case 5:
-                coinThreshold = 600;
+                coinThreshold = 300;
                 break;
             default:
-                coinThreshold = 100;
+                coinThreshold = 50;
                 break;
 
         }
@@ -104,5 +109,28 @@ public class GameManagerEndlessRunner : MonoBehaviour
         {
             allCoinsCollected = true;
         }
+    }
+
+    public void ChangeCurrentScene(int sceneIndex)
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void CheckWinCondition()
+    {
+        if (allCoinsCollected && !winCanvasShown)
+        {
+            winCanvasShown = true;
+            StartCoroutine(ShowWinCanvas());
+        }
+    }
+
+    IEnumerator ShowWinCanvas()
+    {
+        GameObject.Find("CoinCounter").GetComponent<CoinManager>().winCanvas.SetActive(true);
+        yield return new WaitForSeconds(1.5f); 
+        GameObject.Find("CoinCounter").GetComponent<CoinManager>().winCanvas.SetActive(false);
+
     }
 }

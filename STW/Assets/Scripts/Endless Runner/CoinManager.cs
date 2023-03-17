@@ -7,6 +7,7 @@ public class CoinManager : MonoBehaviour
 {
     public TMP_Text coinText;
     public GameObject gameManager;
+    public GameObject winCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,6 @@ public class CoinManager : MonoBehaviour
 
     public void UpdateCoinCounter()
     {
-        coinText.text = gameManager.GetComponent<GameManagerEndlessRunner>().currentCoins.ToString() + "/" + gameManager.GetComponent<GameManagerEndlessRunner>().maxCoins;
+        coinText.text = gameManager.GetComponent<GameManagerEndlessRunner>().currentCoins.ToString() + "/" + gameManager.GetComponent<GameManagerEndlessRunner>().maxCoins + " Münzen";
     }
 }
