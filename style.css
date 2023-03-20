@@ -211,10 +211,8 @@ a.download-button{
     transition: .3s linear;
 }
 a.download-button:hover{
-    background-color: rgba(37,37,37, .5);
-    color: #e5e5e5;
+    background-color: rgb(255,255,255);
     transition: .3s linear;
-
 }
 img.download-icon{
     width: 50px;
@@ -242,6 +240,9 @@ img.download-icon{
     div#download-container{
         flex-direction: row;
     }
+  a.download-button:first-child{
+    margin-right: 1em;
+  }
 }
 @media only screen and (min-width: 769px) {
     /* For desktop: */
